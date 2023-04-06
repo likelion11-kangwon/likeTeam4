@@ -1,0 +1,69 @@
+*{
+    box-sizing: border-box;
+    margin: 0px; /*상우하좌(시계방향) 내 요소와 요소 사이 거리 0*/
+    padding: 0px;
+}
+
+.all{
+    scroll-snap-type: y mandatory; /*스크롤 css 부모한테 줘야함.*/
+}
+.main_page{
+    scroll-snap-align: center; /*스크롤 css 자식한테 줘야함*/
+    color: white;
+    background-color: rgb(127, 200, 129);
+    width: 2300px; height: 1200px;
+    overflow: hidden;
+}
+.main_text1{
+    text-align: center;
+    left: 50%; top: 50%;
+}
+.image{
+    border-radius: 30%;
+    display: inline-block;
+    padding: 0.5rem;
+    margin-top: 200px;
+    border: 1px solid gray;
+    background-color: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgb(255, 255, 255, 0.5);
+    
+}
+.image img{
+    border-radius: 30%;
+}
+
+
+/*
+메뉴 바
+.menu * {
+    display: inline;
+}
+
+.menu li {
+    margin: 35px;
+}
+
+.menu ul {
+    padding-left: 0px;
+}
+
+.menu {
+    font-size: 30px;
+    font-style: italic;
+    align-items: center;
+    text-align: center;
+    padding-top: px;
+    top: 0;
+    left: 0;
+    right: 0;
+    height: 80px;
+} 
+
+.menu li a {
+    color: rgb(255, 255, 255);
+    text-decoration: none;
+}
+/* width 넓이 heigth 높이 margin padding*/
+/* border: 6px solid blue; = 6px 두께, 실선, 파란색 */ 
+/* padding: 4px; ex adding-top  내용으로 부터 테두리까지의 거리
+*/
