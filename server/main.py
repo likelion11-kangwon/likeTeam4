@@ -1,5 +1,5 @@
 from typing import Union
-from fastapi import FastAPI
+from fastapi import FastAPI, status, Response
 from Database import Database
 
 
@@ -8,12 +8,12 @@ db = Database()
 
 # 조회수 가져옴
 def getViewsFromDb():
-    views = 0
+    views = db.read("views", {"id":1})[0][1]
     return views
 
 # 조회수 + d 함
 def updateViews(d):
-    pass
+    db.update("views", {"id":1, "count":int(getViewsFromDb())+d})
 
 # 유저 아이피 반환
 def getIp():
@@ -25,14 +25,14 @@ def checkIp(ip):
     ret = True
     return ret
 
-@app.get("/views")
+@app.get("/views", status_code=200)
 def getViews():
     return {"views":getViewsFromDb()}
 
-@app.post("/views")
-def getViews():
+@app.post("/views", status_code=201)
+def getViews(response: Response):
     if checkIp(getIp()):
-        # 중복 요청 무시하고 403 반환
-        pass
-    updateViews()
-    #성공 이후 200 반환
+        response.status_code = 403
+        return {"response":"중복된 요청"}
+    updateViews(1)
+    return {"response":"성공"}

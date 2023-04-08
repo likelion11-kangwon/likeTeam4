@@ -22,7 +22,7 @@ class Database:
             c = self.dbConnection.cursor()
             query = "SELECT * FROM " + table
             if data:
-                query += "WHERE" + " AND ".join([str(a)+"="+str(data[a]) for a in data])
+                query += " WHERE " + " AND ".join([str(a)+" = "+str(data[a]) for a in data])
             c.execute(query)
             return c.fetchall()
         except Exception as e:
@@ -33,7 +33,7 @@ class Database:
             c = self.dbConnection.cursor()
             query = "UPDATE " + table + " SET "
             query += ", ".join([str(a)+"="+str(data[a]) for a in data if not a=="id"])
-            query += "WHERE " + "id=" + data["id"]
+            query += " WHERE " + "id=" + str(data["id"])
             c.execute(query)
             self.dbConnection.commit()
             return True
@@ -46,4 +46,6 @@ if __name__ == "__main__":
     c = con.cursor()
     c.execute("CREATE TABLE Address (id integer PRIMARY KEY, ip text)")
     c.execute("CREATE TABLE Views (id integer PRIMARY KEY, count integer)")
+    c.execute("INSERT INTO Views VALUES (1, 0)")
+    con.commit()
     con.close()
