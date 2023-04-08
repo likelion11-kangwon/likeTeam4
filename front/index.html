@@ -1,0 +1,65 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Do+Hyeon&display=swap" rel="stylesheet">
+    <title>웹페이지 예시</title>
+    <link rel="stylesheet" href="./style.css">
+    <script src="./script.js"></script>
+</head>
+<body onload="requestViews()">
+	<!-- 상단바 영역 -->
+	<div class="topbar">
+		<a href="./index.html">멋4조</a>
+		<nav>
+			<a href="/spicykong/main.html">신승원</a>
+			<a  href="/sim_main/main.html">심현수</a>
+			<a  href="/ychy61/main.html">윤채연</a>
+			<a  href="/changjin/changjin.html">이창진</a>
+		</nav>
+	</div>
+
+	<!-- 사이드바 영역 -->
+	<div class="sidebar">
+		<div class="sidebar-intro">
+            <span class="sidebar-subtitle">OUR TEAM</span>
+            <span class="sidebar-title">멋쟁이 4조처럼</span>
+            <img src="./images/lion.png"alt="사자">
+            <span class="sidebar-subtitle">지금은 아기사자지만 향후에<br>멋쟁이 사자가 되길<br>바라는 팀입니다</span>
+        </div>
+        <div class="sidebar-feat">
+            <div> TO DAY <span id="getViews">7</span></div>
+            <button class="button-like">
+                <span>LIKE</span>
+                <span id="countLike">7 </span>
+            </button>
+            <a class="a-login" href="#">로그인/회원가입</a>
+        </div>
+	</div>
+
+    <!-- 메인 -->
+    <div class="main">
+        <div class="col">
+            <a class="profile" href="/spicykong/main.html">
+                <div class="img-profile"><img src="./images/lion_1.png"></div>
+                <p>신승원<br>백엔드</p>
+            </a>
+            <a class="profile" href="/ychy61/main.html">
+                <div class="img-profile"><img src="./images/lion_2.png"></div>
+                <p>윤채연<br>프론트엔드</p>
+            </a>
+        </div>
+        <div class="col">
+            <a class="profile" href="/sim_main/main.html">
+                <div class="img-profile"><img src="./images/lion_3.png"></div>
+                <p>심현수<br>프론트엔드</p>
+            </a>
+            <a class="profile" href="/changjin/changjin.html">
+                <div class="img-profile"><img src="./images/lion_4.png"></div>
+                <p>이창진<br>백엔드</p>
+            </a>
+        </div>
+    </div>
+</body>
+</html>

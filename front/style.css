@@ -1,0 +1,197 @@
+body {
+    /* 간격 */
+    margin:0;
+    padding:0;
+    /* 배경 */
+    background-color: black;
+    /* 글꼴 */
+    font-family: 'Do Hyeon', sans-serif;
+    font-weight: bold;
+    vertical-align:middle;
+}
+a {
+    /* 글꼴 */
+    color: white;
+    text-decoration: none;
+}
+
+/* 상단바 스타일 */
+.topbar {
+    /* 표시 */
+    display: flex;
+    
+    justify-content: space-between;
+    align-items: center;
+    /* 크기 */
+    height: 8vh;
+    /* 간격 */
+    padding: 0 20px;
+    /* 글꼴 */
+    color: white;
+    font-size: 1.75rem;
+}
+.topbar a:hover {
+    /* 글꼴 */
+    text-decoration: underline;
+}
+
+/* 사이드바 스타일 */
+.sidebar {
+    /* 흐름 */
+    float: left; 
+    /* 크기 */
+    width: 300px;
+    height: 85vh;
+    /* 간격 */
+    padding: 20px;
+}
+.sidebar-intro{
+    /* 크기 */
+    width: 300px;
+    /* 글꼴 */
+    text-align: center;
+    color: white;
+    text-shadow:  -1.5px 0 #FF731D, 0 1.5px #FF731D, 1.5px 0 #FF731D, 0 -1.5px #FF731D,0 0 5px #FF731D, 0 0 10px #FF731D, 0 0 15px #FF731D;
+}
+.sidebar-intro span{
+    /* 표시 */
+    display: block;
+}
+.sidebar-subtitle{
+    /* 글꼴 */
+    font-size: 1.25rem;
+}
+.sidebar-title{
+    /* 글꼴 */
+    font-size: 2rem;
+}
+.sidebar img{
+    /* 표시 */
+    display: block;
+    /* 위치 */
+    position:relative;
+    /* 크기 */
+    height: 150px;
+    /* 간격 */
+    margin: 20px auto;
+}
+.sidebar-feat{
+    /* 표시 */
+    display: flex;
+    flex-direction: column; 
+    align-items: center;
+    /* 위치 */
+    position:relative;
+    /* 크기 */
+    width: 300px;
+    height: 200px;
+    /* 간격 */
+    margin-top:50px;
+    /* 글꼴 */
+    color: white;
+    font-size: 1.5rem;
+    text-shadow:  -1.5px 0 #5F9DF7, 0 1.5px #5F9DF7, 1.5px 0 #5F9DF7, 0 -1.5px #5F9DF7,0 0 5px #5F9DF7,  0 0 5px #5F9DF7, 0 0 10px #5F9DF7, 0 0 15px #5F9DF7;
+}
+.button-like{
+    /* 크기 */
+    width:90px;
+    height: 90px;
+    /* 간격 */
+    margin: auto;
+    /* 테두리 */
+    border: 1px solid white;
+    border-radius: 100%;
+    box-shadow: 0 0 5px #5F9DF7, 0 0 10px #5F9DF7, 0 0 15px #5F9DF7;
+    /* 배경 */
+    background-color: black;
+    /* 글꼴 */
+    color: white;
+    font-size: 1.5rem;
+    font-weight: bold;
+    text-shadow:  -1.5px 0 #5F9DF7, 0 1.5px #5F9DF7, 1.5px 0 #5F9DF7, 0 -1.5px #5F9DF7,0 0 5px #5F9DF7,  0 0 5px #5F9DF7, 0 0 10px #5F9DF7, 0 0 15px #5F9DF7;
+    /* 기타 */
+    cursor:pointer;
+}
+.button-like span{
+    /* 표시 */
+    display: block;
+    /* 간격 */
+    margin: auto;
+}
+.a-login:hover {
+    /* 글꼴 */
+    text-decoration: underline;
+    /* 기타 */
+    cursor:pointer;
+}
+
+/* 메인 */
+.main {
+    /* 표시 */
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    /* 크기 */
+    line-height: 1.5;
+    min-height: 85vh;
+    /* 간격 */
+    margin-left: 320px;
+    padding: 20px;
+    /* 글꼴 */
+    color: white;
+}
+.col {
+    /* 표시 */
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+}
+.profile{
+    /* 표시 */
+    display: flex;
+    flex-direction: column; 
+    justify-content: center;
+    align-items: center;
+    /* 위치 */
+    position: relative;
+    /* 크기 */
+    width: 230px;
+    height: 260px;
+    /* 간격 */
+    margin: 30px;
+    /* 글꼴 */
+    color: white;
+    font-size: 1.55rem;
+    text-align: center;
+    /* 테두리 */
+    border-radius: 10%;
+    border: 1px solid white;
+    box-shadow: 0 0 5px #FFF, 0 0 15px #FFF;
+    /* 애니메이션 */
+    transition: box-shadow 0.4s ease-in-out;
+    /* 기타 */
+    cursor:pointer;
+}
+.img-profile{
+    /* 표시 */
+    display: flex;
+    /* 크기 */
+    width: 120px;
+    height: 120px;
+    /* 간격 */
+    margin-top: 30px;
+    /* 테두리 */
+    border-radius: 100%;
+    /* 내용 */
+    justify-content: center;
+}
+.img-profile img{
+    /* 크기 */
+    width: 150px;
+    height: 150px;
+}
+.profile:hover {
+    /* 테두리 */
+    box-shadow: 0 0 5px #FF731D, 0 0 15px #FF731D;
+}
