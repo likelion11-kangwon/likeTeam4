@@ -1,4 +1,27 @@
-function requestViews() {
+window.onload = function() {
+      var Container = document.getElementById('lion-fur');
+      for (var i = 0; i < 10; i++) { //10번 반복
+        var fur = document.createElement('div');
+        fur.className = 'fur';
+        Container.appendChild(fur); //div 요소 추가
+        animatefall(fur);
+      }
+      function animatefall(fur) { //사자 털이 내리는 애니메이션 효과
+        var x = Math.random() * window.innerWidth;
+        var y = Math.random();
+        var speed = 1.5 + Math.random(); //기본 속도 1.5
+        function fall() {
+          y += speed;
+          if (y > window.innerHeight) { //y가 화면 높이를 넘어가면
+            x = Math.random() * window.innerWidth;
+            y = Math.random()-50;
+          }
+          fur.style.transform = `translate(${x}px, ${y}px)`;
+          requestAnimationFrame(fall);
+        }
+        fall();
+      }
+
       fetch('http://13.231.197.171:8000/views', { method : 'POST' })//views에 POST 요청
       .then(response => { 
             if (response.status === 200) {
@@ -10,8 +33,9 @@ function requestViews() {
       })
       .catch(error => { //에러 처리
             console.error('POST 요청 에러', error);
-      });          
-}
+      });   
+    };
+    
 
 function getViews() {
       fetch('http://13.231.197.171:8000/views')
@@ -35,3 +59,4 @@ function getViews() {
 function clickAlert() {
       alert("구현 예정입니다");
 }
+
