@@ -31,3 +31,7 @@ function getViews() {
             console.error('GET 요청 에러', error);
       });  
 }
+
+function clickAlert() {
+      alert("구현 예정입니다");
+}
