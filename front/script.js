@@ -34,6 +34,7 @@ window.onload = function() {
       .catch(error => { //에러 처리
             console.error('POST 요청 에러', error);
       });   
+      getViews();
     };
     
 
