@@ -22,7 +22,7 @@ window.onload = function() {
         fall();
       }
 
-      fetch('http://13.231.197.171:8000/views', { method : 'POST' })//views에 POST 요청
+      fetch('https://www.spicykong.shop:8000/views', { method : 'POST' })//views에 POST 요청
       .then(response => { 
             if (response.status === 200) {
                   console.log('POST 요청 성공');
@@ -38,7 +38,7 @@ window.onload = function() {
     
 
 function getViews() {
-      fetch('http://13.231.197.171:8000/views')
+      fetch('https://www.spicykong.shop:8000/views')
       .then(response => {
             if (response.ok){ //응답이 성공했는지
                   console.log('GET 요청 성공');
