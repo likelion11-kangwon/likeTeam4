@@ -71,7 +71,7 @@ body {
     background-size: 100%;
     background-repeat: no-repeat;
     background-position: bottom left;
-    background-image: url(./images/kong.png);
+    background-image: url('https://cdn.jsdelivr.net/gh/likelion11-kangwon/likeTeam4@main/spicykong/images/kong.png');
 }
 
 .card1#head {
@@ -135,17 +135,17 @@ body {
 }
 
 #git {
-    background-image: url('./images/git.png');
+    background-image: url('https://cdn.jsdelivr.net/gh/likelion11-kangwon/likeTeam4@main/spicykong/images/git.png');
     background-size: 80%;
 }
 
 #mail {
-    background-image: url('./images/mail.png');
+    background-image: url('https://cdn.jsdelivr.net/gh/likelion11-kangwon/likeTeam4@main/spicykong/images/mail.png');
     background-size: 90%;
 }
 
 #boj {
-    background-image: url('./images/code.png');
+    background-image: url('https://cdn.jsdelivr.net/gh/likelion11-kangwon/likeTeam4@main/spicykong/images/code.png');
     background-size: 90%;
 }
 
